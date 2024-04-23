@@ -25,6 +25,7 @@
 \setbeamertemplate{bibliography entry location}{}
 \setbeamertemplate{bibliography entry note}{}
 
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
@@ -78,46 +79,46 @@
 	\end{itemize}
 	\centering
 	\begin{figure}
-		\includegraphics[width=0.95\linewidth]{figures/robot.pdf}
+		\includegraphics[width=0.95\linewidth, clip, trim={0 9.3cm 0 10cm}]{figures/robot.pdf}
 		\caption{Data gathering platform with which sensor measurements were recorded to perform 3D localization and mapping, equipped with a lidar Robosense RS-16 (\texttt{1}), an Xsens MTi-10 IMU (\texttt{2}), a Vectornav vn100 IMU (\texttt{3}, behind the Xsens MTi-10) and a barometric pressure sensor DPS310 (\texttt{4}, on the other side of the platform).}
 	\end{figure}
 \end{block}
 
-\begin{block}{Experiments}
-	\begin{columns} % Subdivide the first main column
-		\begin{column}{.5\textwidth} % The first subdivided column within the first main column
-			\centering
-			\begin{figure}
-				\vspace{-25mm}
-				\includegraphics[width=0.95\linewidth]{figures/ice_canyon.jpeg}
-				\caption{The experimental platform rolled down a \SI{30}{\meter} ice canyon.}
-			\end{figure}
-			\begin{itemize}
-				\item \textbf{Glacial moulin}: 
-				\begin{itemize}
-					\item Low feature environment.
-					\item The platform is initially lowered down the moulin while recording sensor measurements.
-					\item Ultimately, the platform was thrown in the moulin to record measurements through extreme motions such as free fall.
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-		\begin{column}{.5\textwidth} % The second subdivided column within the first main column
-			\begin{itemize}
-				\item \textbf{Ice canyon}: 
-				\begin{itemize}
-					\item Low difficulty experiment.
-					\item The platform rolled down an ice canyon while recording sensor measurements.
-					\item Environment with enough constraints and easy access to quickly validate the impact of ice and various factors on the platform.
-				\end{itemize}
-			\end{itemize}
-			\centering
-			\begin{figure}
-				\includegraphics[width=0.95\linewidth]{figures/sphere_moulin_improved_small.jpg}
-				\caption{The experimental platform was lowered in a glacial moulin, mapping its surroundings.}
-			\end{figure}
-		\end{column}
-	\end{columns} % End of the subdivision
-\end{block}
+%\begin{block}{Experiments}
+%	\begin{columns} % Subdivide the first main column
+%		\begin{column}{.5\textwidth} % The first subdivided column within the first main column
+%			\centering
+%			\begin{figure}
+%				\vspace{-25mm}
+%				\includegraphics[width=0.95\linewidth]{figures/ice_canyon.jpeg}
+%				\caption{The experimental platform rolled down a \SI{30}{\meter} ice canyon.}
+%			\end{figure}
+%			\begin{itemize}
+%				\item \textbf{Glacial moulin}: 
+%				\begin{itemize}
+%					\item Low feature environment.
+%					\item The platform is initially lowered down the moulin while recording sensor measurements.
+%					\item Ultimately, the platform was thrown in the moulin to record measurements through extreme motions such as free fall.
+%				\end{itemize}
+%			\end{itemize}
+%		\end{column}
+%		\begin{column}{.5\textwidth} % The second subdivided column within the first main column
+%			\begin{itemize}
+%				\item \textbf{Ice canyon}: 
+%				\begin{itemize}
+%					\item Low difficulty experiment.
+%					\item The platform rolled down an ice canyon while recording sensor measurements.
+%					\item Environment with enough constraints and easy access to quickly validate the impact of ice and various factors on the platform.
+%				\end{itemize}
+%			\end{itemize}
+%			\centering
+%			\begin{figure}
+%				\includegraphics[width=0.95\linewidth]{figures/sphere_moulin_improved_small.jpg}
+%				\caption{The experimental platform was lowered in a glacial moulin, mapping its surroundings.}
+%			\end{figure}
+%		\end{column}
+%	\end{columns} % End of the subdivision
+%\end{block}
 
 %----------------------------------------------------------------------------------------
 
@@ -176,25 +177,9 @@
 %	New block	
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Future works}
-	\begin{itemize}
-		\item \textbf{Increase mapping performances and robustness} through fusion of information from several sensors, including atmospheric pressure.
-		\item \textbf{Improvement of the experimental platform} to increase its robustness and versatility. 
-	\end{itemize}
-\end{block}
-
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
 %----------------------------------------------------------------------------------------
-
-\begin{block}{Acknowledgments and References}
-\footnotesize%
-\noindent This research was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) through the General Research Fund (GRF) from Universit\'e Laval.
-\nocite{*} % Insert publications even if they are not cited in the poster
-\bibliographystyle{unsrt}%
-{\footnotesize\bibliography{biblio}}
-\vspace{-3mm}
-\end{block}
 
 %----------------------------------------------------------------------------------------
 %	CONTACT INFORMATION
@@ -216,8 +201,90 @@
 
 \end{column} % End of the second column
 
+
 \begin{column}{.015\textwidth}\end{column} % Empty spacer column
 \end{columns} % End of all the columns in the poster
+
+
+\begin{columns}[t] 
+
+\begin{column}{.02\textwidth}\end{column} % Empty spacer column
+\begin{column}{.970\textwidth}
+\begin{block}{Experiments}
+	\begin{columns} % Subdivide the first main column
+		\begin{minipage}{.33\textwidth} % The first subdivided column within the first main column
+			\begin{itemize}
+				\item \textbf{Ice canyon}: 
+				\begin{itemize}
+					\item Low difficulty experiment.
+					\item The platform rolled down an ice canyon while recording sensor measurements.
+					\item Environment with enough constraints and easy access to quickly validate the impact of ice and various factors on the platform.
+				\end{itemize}
+			\end{itemize}
+			\begin{itemize}
+				\item \textbf{Glacial moulin}: 
+				\begin{itemize}
+					\item Low feature environment.
+					\item The platform is initially lowered down the moulin while recording sensor measurements.
+					\item Ultimately, the platform was thrown in the moulin to record measurements through extreme motions such as free fall.
+				\end{itemize}
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{.33\textwidth}
+			\centering
+			\begin{figure}
+				\includegraphics[height=.65\linewidth]{figures/ice_canyon.jpeg}
+				\caption{The experimental platform rolled down a \SI{30}{\meter} ice canyon. \textcolor{white}{ugly spacefillerto break a line}}
+			\end{figure}
+		\end{minipage}
+		\begin{minipage}{.33\textwidth} % The second subdivided column within the first main column
+			\centering
+			\begin{figure}
+				\includegraphics[height=.65\linewidth]{figures/sphere_moulin_improved_small.jpg}
+				\caption{The experimental platform was lowered in a glacial moulin, mapping its surroundings.}
+			\end{figure}
+		\end{minipage}
+		\hfill
+	\end{columns} % End of the subdivision
+\end{block}
+\end{column}
+
+\begin{column}{.015\textwidth}\end{column} % Empty spacer column
+\end{columns}
+
+
+\begin{columns}[t] 
+
+\begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+\begin{column}{.465\textwidth} % The first column
+\begin{block}{Future works}
+	\begin{itemize}
+		\item \textbf{Increase mapping performances and robustness} through fusion of information from several sensors.
+		\item \textbf{Use an atmospheric pressure sensor} to better constrain the elevation drift.
+		\item \textbf{Improve the experimental platform} to increase its robustness and versatility. 
+	\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{.03\textwidth}\end{column} % Empty spacer column
+ 
+\begin{column}{.465\textwidth} % The second column
+\begin{block}{Acknowledgments and References}
+\footnotesize%
+\noindent This research was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) through the General Research Fund (GRF) from Universit\'e Laval.
+\nocite{*} % Insert publications even if they are not cited in the poster
+\bibliographystyle{unsrt}%
+{\footnotesize\bibliography{biblio}}
+\vspace{-3mm}
+\end{block}
+\end{column}
+
+\begin{column}{.015\textwidth}\end{column} % Empty spacer column
+
+\end{columns} % End of all the columns in the poster
+
+
 %----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
