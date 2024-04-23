@@ -33,7 +33,7 @@
 
 \author{\normalsize William Dubois,$^1$ Matěj Boxan,$^1$ Johann Laconte,$^2$ François Pomerleau$^1$} % Author(s)
 
-\institute{\small$^1$ Northern Robotics Laboratory, Universit\'e Laval \\ \small$^2$ French National Research Institute for Agriculture, Food and the Environment} % Institution(s)
+\institute{\small$^1$ Northern Robotics Laboratory, Universit\'e Laval, Quebec City, Quebec, Canada \\ \small$^2$ French National Research Institute for Agriculture, Food and the Environment} % Institution(s)
 
 %----------------------------------------------------------------------------------------
 %	FOOTER TEXT
@@ -64,17 +64,17 @@
 \begin{block}{Context \& Motivations}
 \begin{itemize}
 	\item Deploying robots in the cryosphere is still an open problem \cite{Pomerleau2023}, and is a crucial source of data collection and analysis, essential for understanding problems such as climate change.
-	\item Dante wad the first robot successfully deployed in a remote hazardous setting, an Alaskan volcano \cite{Dante2}, demonstrating feasibility 
-	\item item
+	\item Dante was the first robot successfully deployed in a remote hazardous setting, an Alaskan volcano \cite{Dante2}, demonstrating feasibility 
+	\item Prior deployments have shown the hazardous conditions surrounding surveys within glaciers \cite{Talbot2023, Polzin2023} and have highlighted the potential of robotic platforms in monitoring changes.
 \end{itemize}
 \end{block}
 
 \begin{block}{Experimental platform}
 	\begin{itemize}
-		\item We designed and developed a measurement platform capable of sustaining significant force caused by various extreme motions and collisions that can occur in extreme environments.
+		\item We designed and developed a measurement platform capable of sustaining significant forces caused by various extreme motions and collisions that can occur in extreme environments.
 		\item The platform is built to record data from sensors needed to perform localization and mapping using a Raspberry Pi 4B.
 		\item Data is then post-processed to complete the localization and mapping and evaluate its performances.
-		\item To ensure no pollution is left on-site if anything breaks, a safety net was installed on the platform, thin enough for it not to cause any occlusions.
+		\item To ensure no pollution is left on-site if anything breaks, a safety net was installed on the platform, thin enough not to cause any occlusions.
 	\end{itemize}
 	\centering
 	\begin{figure}
@@ -151,6 +151,10 @@
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Results}
+\begin{itemize}
+	\item Lidar and IMU measurements enabled us to compute 3D mapping and localization of the experimental platform throughout its slow descent in the moulin.
+	\item Experiments were conclusive, but only low quality maps were obtainable. 
+\end{itemize}
 \begin{figure}
 \includegraphics[width=1.0\linewidth]{figures/moulin2.pdf}%
 \vspace{-7mm}
@@ -164,7 +168,7 @@
 		\item lower quality maps,
 		\item lower quality information about the surveyed environment.
 	\end{itemize}
-	\item Addition of barometric pressure information helps gain constraints.
+	\item Addition of barometric pressure information can help gain constraints.
 \end{itemize}
 \end{block}
 
